@@ -1,0 +1,29 @@
+[
+  {
+    "id": 0,
+    "title": "Torneo Interno MxG — Abril",
+    "desc": "Equipo Habid vs Equipo Stark. 3 partidas de Conquista. Tabla de puntos activa.",
+    "day": "12",
+    "month": "ABR",
+    "year": "2025",
+    "status": "active"
+  },
+  {
+    "id": 1,
+    "title": "Torneo de Remontada",
+    "desc": "Especial para jugadores fuera del top. Los 4 clasificados ganan 50 puntos cada uno.",
+    "day": "",
+    "month": "ABR",
+    "year": "2025",
+    "status": "soon"
+  },
+  {
+    "id": 2,
+    "title": "Torneos vs Clanes Externos",
+    "desc": "MxG vs otros clanes en servidores privados. Hasta 16 clanes participantes.",
+    "day": "",
+    "month": "TEMP",
+    "year": "2025",
+    "status": "season"
+  }
+]

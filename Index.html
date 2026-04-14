@@ -478,6 +478,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:40px 2
   background:none;border:none;width:100%;text-transform:uppercase;
 }
 .pwd-cancel:hover { color:white; }
+.cloud-loading{text-align:center;color:var(--gray);font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:2px;padding:32px;text-transform:uppercase}
 </style>
 </head>
 <body>
@@ -622,21 +623,8 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:40px 2
       <button class="btn-add-event" onclick="requestPassword('add')">🔒 AGREGAR EVENTO</button>
     </div>
     <div class="events-list" id="eventsList">
-      <div class="event-card" data-id="0">
-        <div class="event-actions"><button class="btn-edit-ev" onclick="requestPassword('edit',0)">✏ EDITAR</button><button class="btn-del-ev" onclick="requestPassword('del',0)">✕ BORRAR</button></div>
-        <div class="event-date"><div class="edate-num">12</div><div class="eday">ABR</div><div class="emon">2025</div></div>
-        <div><div class="ev-title">Torneo Interno MxG — Abril</div><div class="ev-desc">Equipo Habid vs Equipo Stark. 3 partidas de Conquista. Tabla de puntos activa.</div><span class="ev-badge active">EN CURSO</span></div>
-      </div>
-      <div class="event-card" data-id="1">
-        <div class="event-actions"><button class="btn-edit-ev" onclick="requestPassword('edit',1)">✏ EDITAR</button><button class="btn-del-ev" onclick="requestPassword('del',1)">✕ BORRAR</button></div>
-        <div class="event-date"><div class="eday">ABR</div><div class="emon">2025</div></div>
-        <div><div class="ev-title">Torneo de Remontada</div><div class="ev-desc">Especial para jugadores fuera del top. Los 4 clasificados ganan 50 puntos cada uno.</div><span class="ev-badge soon">PRÓXIMAMENTE</span></div>
-      </div>
-      <div class="event-card" data-id="2">
-        <div class="event-actions"><button class="btn-edit-ev" onclick="requestPassword('edit',2)">✏ EDITAR</button><button class="btn-del-ev" onclick="requestPassword('del',2)">✕ BORRAR</button></div>
-        <div class="event-date"><div class="eday">2025</div><div class="emon">TEMP</div></div>
-        <div><div class="ev-title">Torneos vs Clanes Externos</div><div class="ev-desc">MxG vs otros clanes en servidores privados. Hasta 16 clanes participantes.</div><span class="ev-badge season">TEMPORADA ACTIVA</span></div>
-      </div>
+      <div class="cloud-loading">Cargando eventos...</div>
+    </div>
     </div>
   </div>
 </div>
@@ -654,42 +642,7 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:40px 2
   <div class="points-wrap fade-up">
     <table class="points-table">
       <thead><tr><th>#</th><th>Jugador</th><th style="text-align:right">PTS</th></tr></thead>
-      <tbody><tr class="gold"><td class="rank">🥇</td><td class="pname">MxGxEliut</td><td class="pts pos">130</td></tr>
-<tr class="silver"><td class="rank">🥈</td><td class="pname">MxGxCuesillo</td><td class="pts pos">130</td></tr>
-<tr class="bronze"><td class="rank">🥉</td><td class="pname">MxGxReaper69</td><td class="pts pos">130</td></tr>
-<tr class=""><td class="rank">#4</td><td class="pname">MxGxStark</td><td class="pts pos">130</td></tr>
-<tr class=""><td class="rank">#5</td><td class="pname">MxGxAlmighty</td><td class="pts pos">115</td></tr>
-<tr class=""><td class="rank">#6</td><td class="pname">MxGxHabidG</td><td class="pts pos">100</td></tr>
-<tr class=""><td class="rank">#7</td><td class="pname">MxGx Gio</td><td class="pts pos">100</td></tr>
-<tr class=""><td class="rank">#8</td><td class="pname">MxG-Stanly</td><td class="pts pos">90</td></tr>
-<tr class=""><td class="rank">#9</td><td class="pname">MxGx EngelARM</td><td class="pts pos">90</td></tr>
-<tr class=""><td class="rank">#10</td><td class="pname">MxGxALDAYO97</td><td class="pts pos">90</td></tr>
-<tr class=""><td class="rank">#11</td><td class="pname">MxGxluiZeppelin</td><td class="pts pos">75</td></tr>
-<tr class=""><td class="rank">#12</td><td class="pname">MxGxPotato</td><td class="pts pos">65</td></tr>
-<tr class=""><td class="rank">#13</td><td class="pname">MxGxLV</td><td class="pts pos">65</td></tr>
-<tr class=""><td class="rank">#14</td><td class="pname">Hueson</td><td class="pts pos">55</td></tr>
-<tr class=""><td class="rank">#15</td><td class="pname">Neforaso</td><td class="pts pos">50</td></tr>
-<tr class=""><td class="rank">#16</td><td class="pname">ABRAHAM_F</td><td class="pts pos">50</td></tr>
-<tr class=""><td class="rank">#17</td><td class="pname">MxGxBurrito</td><td class="pts pos">45</td></tr>
-<tr class=""><td class="rank">#18</td><td class="pname">MxGxLALO</td><td class="pts pos">45</td></tr>
-<tr class=""><td class="rank">#19</td><td class="pname">MxGxRafa</td><td class="pts pos">45</td></tr>
-<tr class=""><td class="rank">#20</td><td class="pname">InfinityG7</td><td class="pts pos">40</td></tr>
-<tr class=""><td class="rank">#21</td><td class="pname">MxGxREAVENBLOOD</td><td class="pts pos">35</td></tr>
-<tr class=""><td class="rank">#22</td><td class="pname">BlackDragonMx20</td><td class="pts pos">25</td></tr>
-<tr class=""><td class="rank">#23</td><td class="pname">Out_A_Mike</td><td class="pts pos">15</td></tr>
-<tr class=""><td class="rank">#24</td><td class="pname">RIUTOSINGER</td><td class="pts pos">15</td></tr>
-<tr class=""><td class="rank">#25</td><td class="pname">Pilchan II</td><td class="pts pos">15</td></tr>
-<tr class=""><td class="rank">#26</td><td class="pname">REY-GAMER22</td><td class="pts pos">15</td></tr>
-<tr class=""><td class="rank">#27</td><td class="pname">ORTIZDESTRUCTOR-</td><td class="pts pos">15</td></tr>
-<tr class=""><td class="rank">#28</td><td class="pname">God Vanished</td><td class="pts pos">10</td></tr>
-<tr class=""><td class="rank">#29</td><td class="pname">apodakah</td><td class="pts zero">0</td></tr>
-<tr class=""><td class="rank">#30</td><td class="pname">RONDOVSKI</td><td class="pts zero">0</td></tr>
-<tr class=""><td class="rank">#31</td><td class="pname">Sleinyer-33</td><td class="pts zero">0</td></tr>
-<tr class=""><td class="rank">#32</td><td class="pname">XxBadBoyx3683</td><td class="pts zero">0</td></tr>
-<tr class=""><td class="rank">#33</td><td class="pname">Znake</td><td class="pts zero">0</td></tr>
-<tr class=""><td class="rank">#34</td><td class="pname">EL_GallOIDIoroKGB</td><td class="pts zero">0</td></tr>
-<tr class=""><td class="rank">#35</td><td class="pname">MANYAK911</td><td class="pts zero">0</td></tr>
-</tbody>
+      <tbody><tr><td colspan="3" style="text-align:center;color:var(--gray);padding:24px;letter-spacing:2px;font-size:13px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase">Cargando puntos...</td></tr></tbody>
     </table>
   </div>
 </section>
@@ -703,7 +656,9 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:40px 2
   <div class="members-content fade-up">
     <div class="section-tag">Nuestro equipo</div>
     <h2 class="section-title">MIEMBROS ACTIVOS</h2>
-    <div class="members-grid"><div class="member-card"><div class="member-glow"></div><div class="member-avatar">M</div><div class="member-info"><div class="member-name">MxGxEliut</div><div class="member-status"><span class="dot"></span>ACTIVO</div></div></div>
+    <div class="members-grid" id="membersGrid">
+<div class="cloud-loading">Cargando miembros...</div>
+</div></div>
 <div class="member-card"><div class="member-glow"></div><div class="member-avatar">M</div><div class="member-info"><div class="member-name">MxGx Gio</div><div class="member-status"><span class="dot"></span>ACTIVO</div></div></div>
 <div class="member-card"><div class="member-glow"></div><div class="member-avatar">M</div><div class="member-info"><div class="member-name">MxGxHabidG</div><div class="member-status"><span class="dot"></span>ACTIVO</div></div></div>
 <div class="member-card"><div class="member-glow"></div><div class="member-avatar">M</div><div class="member-info"><div class="member-name">MxG-Stanly</div><div class="member-status"><span class="dot"></span>ACTIVO</div></div></div>
@@ -793,7 +748,14 @@ window.addEventListener('scroll', () => {
   navLinks.forEach(a => { a.style.color = a.getAttribute('href')==='#'+current ? 'var(--green)' : ''; });
 });
 const badgeLabels={active:'EN CURSO',soon:'PRÓXIMAMENTE',season:'TEMPORADA ACTIVA'};
-let editingId=null, eventCounter=3;
+let editingId=null, eventCounter=0;
+let eventsData = [];
+
+// ===== CLOUD CONFIG =====
+const REPO   = 'myhabid-code/MXG';
+const BRANCH = 'mexas-gaming';
+const RAW    = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/data`;
+let GITHUB_TOKEN = ''; // Opcional: poner PAT del admin aquí
 const ADMIN_PWD = 'MXG2026';
 let pendingAction = null;
 let pendingId = null;
@@ -841,13 +803,14 @@ function openModal(editId=null){
   editingId=editId;
   document.getElementById('modalTitle').textContent=editId!==null?'EDITAR EVENTO':'NUEVO EVENTO';
   if(editId!==null){
-    const card=document.querySelector(`[data-id="${editId}"]`);
-    document.getElementById('evTitle').value=card.querySelector('.ev-title').textContent;
-    document.getElementById('evDesc').value=card.querySelector('.ev-desc').textContent;
-    document.getElementById('evDay').value=card.querySelector('.edate-num').textContent.replace('--','');
-    document.getElementById('evMonth').value=card.querySelector('.eday').textContent;
-    document.getElementById('evYear').value=card.querySelector('.emon').textContent;
-    document.getElementById('evStatus').value=card.querySelector('.ev-badge').classList[1];
+    const ev=eventsData.find(e=>e.id===editId);
+    if(!ev)return;
+    document.getElementById('evTitle').value=ev.title;
+    document.getElementById('evDesc').value=ev.desc;
+    document.getElementById('evDay').value=ev.day||'';
+    document.getElementById('evMonth').value=ev.month||'';
+    document.getElementById('evYear').value=ev.year||'2025';
+    document.getElementById('evStatus').value=ev.status;
   }else{
     document.getElementById('evTitle').value='';
     document.getElementById('evDesc').value='';
@@ -862,19 +825,127 @@ function closeModal(){ document.getElementById('eventModal').classList.remove('o
 function saveEvent(){
   const title=document.getElementById('evTitle').value.trim();
   const desc=document.getElementById('evDesc').value.trim();
+  const day=document.getElementById('evDay').value.trim();
   const month=document.getElementById('evMonth').value.trim().toUpperCase()||'EVT';
   const year=document.getElementById('evYear').value.trim()||'2025';
   const status=document.getElementById('evStatus').value;
   if(!title){alert('Escribe el título');return;}
-  const id=editingId!==null?editingId:eventCounter;
-  const cardHTML=`<div class="event-card" data-id="${id}"><div class="event-actions"><button class="btn-edit-ev" onclick="editEvent(${id})">✏ EDITAR</button><button class="btn-del-ev" onclick="deleteEvent(${id})">✕ BORRAR</button></div><div class="event-date"><div class="eday">${month}</div><div class="emon">${year}</div></div><div><div class="ev-title">${title}</div><div class="ev-desc">${desc}</div><span class="ev-badge ${status}">${badgeLabels[status]}</span></div></div>`;
-  if(editingId!==null){ document.querySelector(`[data-id="${editingId}"]`).outerHTML=cardHTML; }
-  else{ document.getElementById('eventsList').insertAdjacentHTML('beforeend',cardHTML); eventCounter++; }
+  if(editingId!==null){
+    const idx=eventsData.findIndex(e=>e.id===editingId);
+    if(idx>=0) eventsData[idx]={id:editingId,title,desc,day,month,year,status};
+  }else{
+    eventsData.push({id:eventCounter,title,desc,day,month,year,status});
+    eventCounter++;
+  }
+  renderEvents(eventsData);
+  saveEventsToGitHub();
   closeModal();
 }
 function editEvent(id){ openModal(id); }
-function deleteEvent(id){ if(confirm('¿Borrar este evento?')) document.querySelector(`[data-id="${id}"]`).remove(); }
+function deleteEvent(id){
+  if(confirm('¿Borrar este evento?')){
+    eventsData=eventsData.filter(e=>e.id!==id);
+    renderEvents(eventsData);
+    saveEventsToGitHub();
+  }
+}
 document.getElementById('eventModal').addEventListener('click',function(e){ if(e.target===this) closeModal(); });
+
+// ===== CLOUD FUNCTIONS =====
+function renderEvents(data){
+  eventsData=data;
+  if(data.length>0) eventCounter=Math.max(...data.map(e=>e.id))+1;
+  const list=document.getElementById('eventsList');
+  if(!data.length){ list.innerHTML='<div class="cloud-loading">No hay eventos aún.</div>'; return; }
+  list.innerHTML=data.map(ev=>{
+    const dateBlock=ev.day
+      ?`<div class="edate-num">${ev.day}</div><div class="eday">${ev.month}</div><div class="emon">${ev.year}</div>`
+      :`<div class="eday">${ev.month}</div><div class="emon">${ev.year}</div>`;
+    return `<div class="event-card" data-id="${ev.id}">
+      <div class="event-actions">
+        <button class="btn-edit-ev" onclick="requestPassword('edit',${ev.id})">✏ EDITAR</button>
+        <button class="btn-del-ev" onclick="requestPassword('del',${ev.id})">✕ BORRAR</button>
+      </div>
+      <div class="event-date">${dateBlock}</div>
+      <div>
+        <div class="ev-title">${ev.title}</div>
+        <div class="ev-desc">${ev.desc}</div>
+        <span class="ev-badge ${ev.status}">${badgeLabels[ev.status]}</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+function renderMembers(data){
+  const grid=document.getElementById('membersGrid');
+  if(!grid)return;
+  grid.innerHTML=data.map(m=>`<div class="member-card"><div class="member-glow"></div><div class="member-avatar">${m.avatar}</div><div class="member-info"><div class="member-name">${m.name}</div><div class="member-status"><span class="dot"></span>${m.status}</div></div></div>`).join('');
+}
+function renderPoints(data){
+  const tbody=document.querySelector('.points-table tbody');
+  if(!tbody)return;
+  const medals=['🥇','🥈','🥉'], rowCls=['gold','silver','bronze'];
+  tbody.innerHTML=data.map((p,i)=>{
+    const rank=i<3?medals[i]:`#${i+1}`;
+    const cls=i<3?rowCls[i]:'';
+    const ptsCls=p.points===0?'zero':'pos';
+    return `<tr class="${cls}"><td class="rank">${rank}</td><td class="pname">${p.name}</td><td class="pts ${ptsCls}">${p.points}</td></tr>`;
+  }).join('');
+  const hdr=document.querySelector('.points-header-left');
+  if(hdr) hdr.textContent=`Abril 2025 · ${data.length} jugadores`;
+}
+async function loadEvents(){
+  try{
+    const res=await fetch(`${RAW}/events.json?t=${Date.now()}`);
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    renderEvents(await res.json());
+  }catch(e){
+    document.getElementById('eventsList').innerHTML='<div class="cloud-loading">Error al cargar eventos.</div>';
+  }
+}
+async function loadMembers(){
+  try{
+    const res=await fetch(`${RAW}/members.json?t=${Date.now()}`);
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    renderMembers(await res.json());
+  }catch(e){
+    const g=document.getElementById('membersGrid');
+    if(g) g.innerHTML='<div class="cloud-loading">Error al cargar miembros.</div>';
+  }
+}
+async function loadPoints(){
+  try{
+    const res=await fetch(`${RAW}/points.json?t=${Date.now()}`);
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    renderPoints(await res.json());
+  }catch(e){
+    const b=document.querySelector('.points-table tbody');
+    if(b) b.innerHTML='<tr><td colspan="3" style="text-align:center;color:var(--gray);padding:24px">Error al cargar puntos.</td></tr>';
+  }
+}
+async function loadAllData(){
+  await Promise.all([loadEvents(),loadMembers(),loadPoints()]);
+}
+async function saveEventsToGitHub(){
+  if(!GITHUB_TOKEN) return;
+  try{
+    const path='data/events.json';
+    const getRes=await fetch(`https://api.github.com/repos/${REPO}/contents/${path}?ref=${BRANCH}`,{
+      headers:{Authorization:`token ${GITHUB_TOKEN}`,Accept:'application/vnd.github.v3+json'}
+    });
+    const fileInfo=await getRes.json();
+    await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`,{
+      method:'PUT',
+      headers:{Authorization:`token ${GITHUB_TOKEN}`,'Content-Type':'application/json',Accept:'application/vnd.github.v3+json'},
+      body:JSON.stringify({
+        message:'Update events via MxG admin',
+        content:btoa(unescape(encodeURIComponent(JSON.stringify(eventsData,null,2)))),
+        sha:fileInfo.sha,
+        branch:BRANCH
+      })
+    });
+  }catch(e){ console.warn('No se pudo guardar en GitHub:',e); }
+}
+
 // MUSIC PLAYER
 const audio = document.getElementById('bgMusic');
 const btn = document.getElementById('musicBtn');
@@ -954,6 +1025,8 @@ const twitchObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 const liveSection = document.getElementById('live');
 if (liveSection) twitchObserver.observe(liveSection);
+// Cargar datos desde GitHub al iniciar
+loadAllData();
 </script>
 </body>
 </html>
